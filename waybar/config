@@ -6,7 +6,15 @@
     "output": "eDP-1",
     "modules-left": ["hyprland/workspaces", "hyprland/window"],
     "modules-center": [],
-    "modules-right": ["pulseaudio", "network", "bluetooth", "cpu", "memory", "battery", "clock", "tray"],
+    "modules-right": ["custom/updates", "pulseaudio", "network", "bluetooth", "cpu", "memory", "battery", "clock", "tray"],
+
+    "custom/updates": {
+        "format": "󰏖 {}",
+        "interval": 3600,
+        "exec": "apt list --upgradable 2>/dev/null | grep -c upgradable",
+        "on-click": "kitty -e sudo apt update && sudo apt upgrade",
+        "tooltip": false
+    },
 
     "hyprland/workspaces": {
         "format": "{name}",
@@ -61,7 +69,7 @@
         "format-linked": " {ifname} (No IP)",
         "format-disconnected": "⚠ Disconnected",
         "format-alt": "{ifname}: {ipaddr}/{cidr}",
-        "on-click": "nm-connection-editor"
+        "on-click": "adwaita-network"
     },
 
     "bluetooth": {

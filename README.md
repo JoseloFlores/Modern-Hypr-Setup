@@ -9,27 +9,33 @@ Copia y pega este comando en tu terminal para instalar todos los programas neces
 
 ```bash
 sudo apt update && sudo apt install -y \
-    hyprland \
-    waybar \
-    swaybg \
-    wofi \
-    gnome-terminal \
-    nautilus \
-    google-chrome-stable \
-    playerctl \
-    wireplumber \
-    brightnessctl \
-    grim \
-    slurp \
-    swappy \
-    jq \
-    fonts-font-awesome \
-    pavucontrol \
-    blueman \
-    network-manager-gnome
+    hyprland waybar swaybg wofi gnome-terminal nautilus \
+    google-chrome-stable playerctl wireplumber brightnessctl \
+    grim slurp swappy jq fonts-font-awesome pavucontrol \
+    blueman build-essential libadwaita-1-dev libgtk-4-dev \
+    libgdk-pixbuf-2.0-dev pkg-config
 ```
 
-### 2. Clonar Configuración
+### 2. Gestión de Red (Adwaita Network)
+Esta configuración utiliza [adw-network](https://github.com/PlayRood32/adw-network) para una gestión de red moderna con estética libadwaita.
+
+#### Instalación:
+Requiere **Rust 1.95+**. Si usas la versión de Debian, actualiza con `rustup`.
+
+```bash
+# Compilar e instalar
+git clone https://github.com/PlayRood32/adw-network.git
+cd adw-network
+cargo build --release
+sudo install -Dm755 target/release/adwaita-network /usr/bin/adwaita-network
+sudo install -Dm644 data/com.github.adw-network.desktop /usr/share/applications/com.github.adw-network.desktop
+
+# Instalar Icono
+sudo install -Dm644 data/icons/hicolor/scalable/apps/icon.png /usr/share/icons/hicolor/scalable/apps/adwaita-network.png
+sudo sed -i 's/Icon=icon/Icon=adwaita-network/' /usr/share/applications/com.github.adw-network.desktop
+```
+
+### 3. Clonar Configuración
 Si ya tienes este repo en GitHub, clónalo directamente en tu carpeta `.config`:
 
 ```bash
@@ -62,4 +68,5 @@ Estos atajos son globales y funcionan sin importar el foco de la ventana:
 
 ## 🛠️ Notas Adicionales
 - **Spotify:** Para que los controles multimedia funcionen con Spotify, asegúrate de que la aplicación esté abierta (usa `Super + Z`).
+- **Actualizaciones:** El icono 󰏖 en la barra (Waybar) indica actualizaciones de Debian pendientes. Haz clic en él para abrir Kitty y actualizar el sistema automáticamente.
 - **Waybar:** Si la barra no carga, verifica que el archivo `~/.config/hypr/waybar/config` tenga las rutas correctas.

@@ -1,7 +1,7 @@
 * {
     border: none;
     border-radius: 0;
-    font-family: "MesloLGMNerdFontPropo-Regular", "Helvetica", "Arial", sans-serif;
+    font-family: "MesloLGM Nerd Font Mono", "Symbols Nerd Font", "Helvetica", "Arial", sans-serif;
     font-size: 13px;
     min-height: 0;
 }
@@ -42,6 +42,7 @@ window#waybar {
 #mode,
 #tray,
 #window,
+#custom-updates,
 #bluetooth {
     padding: 0 10px;
     margin: 4px 4px;
@@ -81,6 +82,10 @@ window#waybar {
 
 #bluetooth {
     color: #7aa2f7;
+}
+
+#custom-updates {
+    color: #f7768e;
 }
 
 #cpu {
