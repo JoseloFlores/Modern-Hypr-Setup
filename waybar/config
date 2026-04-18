@@ -12,7 +12,7 @@
         "format": "󰏖 {}",
         "interval": 3600,
         "exec": "apt list --upgradable 2>/dev/null | grep -c upgradable",
-        "on-click": "kitty -e sudo apt update && sudo apt upgrade",
+        "on-click": "gnome-terminal -e sudo apt update && sudo apt upgrade",
         "tooltip": false
     },
 
