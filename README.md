@@ -16,14 +16,14 @@ git clone https://github.com/JoseloFlores/Modern-Hypr-Setup.git && cd Modern-Hyp
 
 ## ✨ Características Principales
 
--   **⚡ Gestión de Energía (Estilo GNOME):** 
+-   **⚡ Gestión de Energía:** 
     -   Bloqueo automático tras 5 min de inactividad.
     -   Apagado inmediato de monitores al bloquear (`Super + L`) o cerrar la tapa.
     -   Suspensión automática tras 30 min.
 -   **🔘 Menú de Energía y Quick Settings:** Drawer integrado y grupo de ajustes rápidos (Volumen, Red, Bluetooth, Batería) con estilo moderno.
 -   **🎵 Control de Medios:** Integración con MPRIS para controlar música (Spotify, Firefox, etc.) directamente desde la barra.
 -   **📸 Capturas Inteligentes:** Integración con `grim`, `slurp` y `swappy` para edición inmediata.
--   **🎨 Estética Coherente:** Waybar rediseñado con estilo tipo "píldora" y Wofi con estilos personalizados.
+-   **🎨 Estética Coherente:** Waybar rediseñado con estilo tipo "píldora" y Wofi con estilos personalizados y temas para elegir.
 -   **📦 Gestión de Actualizaciones (Waybar):**
     -   Módulo inteligente en la barra que muestra el estado del sistema.
     -   **Icono Gris (`󰚰 0`):** Tu sistema está actualizado.
@@ -39,7 +39,7 @@ git clone https://github.com/JoseloFlores/Modern-Hypr-Setup.git && cd Modern-Hyp
 | ----------- | ------ |
 | `Super + Return` | Terminal (`foot`) |
 | `Super + D` | Lanzador de aplicaciones (`wofi`) |
-| `Super + L` | Bloquear sesión (`hyprlock`) |
+| `Super + L` | Bloquear sesión, apagado o cerrar sesion(`hyprlock`) |
 | `Super + Q` | Cerrar ventana activa |
 | `Super + E` | Explorador de archivos (`nautilus`) |
 | `Super + Shift + B` | Recargar Waybar (Configuración y Estilo) |
@@ -64,5 +64,7 @@ git clone https://github.com/JoseloFlores/Modern-Hypr-Setup.git && cd Modern-Hyp
 -   `hyprland.conf`: Configuración principal de Hyprland.
 -   `hypridle.conf` & `hyprlock.conf`: Gestión de inactividad y bloqueo.
 -   `waybar/`: Configuración y estilos de la barra superior.
+-   `conky/`: Configuración de estadísticas del sistema.
 -   `power_menu.sh` & `confirm_power.sh`: Scripts auxiliares para el menú de energía.
 -   `wall2.jpg`: Fondo de pantalla por defecto.
+lla por defecto.
