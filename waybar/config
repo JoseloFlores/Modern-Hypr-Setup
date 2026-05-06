@@ -114,7 +114,6 @@
         "timezone": "America/Argentina/Buenos_Aires",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt>{calendar}</tt>",
         "format": " {:%H:%M   %d/%m}",
-        "format-alt": " {:%H:%M}",
         "calendar": {
             "mode"          : "month",
             "mode-mon-col"  : 3,
@@ -129,6 +128,8 @@
             }
         },
         "actions":  {
+            "on-click": "shift_down",
+            "on-click-middle": "shift_up",
             "on-click-right": "mode",
             "on-click-forward": "tz_up",
             "on-click-backward": "tz_down",
@@ -158,11 +159,11 @@
     },
 
     "network": {
-        "format-wifi": " {essid}",
-        "format-ethernet": " {ifname}",
+        "format-wifi": "",
+        "format-ethernet": "",
         "tooltip-format": " {ifname} via {gwaddr}",
-        "format-linked": " {ifname} (No IP)",
-        "format-disconnected": "⚠ Disconnected",
+        "format-linked": "",
+        "format-disconnected": "⚠",
         "on-click": "adwaita-network"
     },
 
