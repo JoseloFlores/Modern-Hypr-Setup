@@ -5,8 +5,8 @@
     "spacing": 0,
     "output": "eDP-1",
     "modules-left": ["hyprland/workspaces", "hyprland/window"],
-    "modules-center": ["mpris"],
-    "modules-right": ["group/quicksettings", "clock", "custom/updates", "backlight", "tray", "group/power"],
+    "modules-center": ["mpris", "clock"],
+    "modules-right": ["group/quicksettings", "custom/updates", "backlight", "tray", "group/power"],
 
     "backlight": {
         "device": "intel_backlight",
