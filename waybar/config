@@ -12,8 +12,8 @@
         "device": "intel_backlight",
         "format": "{icon} {percent}%",
         "format-icons": ["", "", "", "", "", "", "", "", ""],
-        "on-scroll-up": "brightnessctl set 1%+",
-        "on-scroll-down": "brightnessctl set 1%-",
+        "on-scroll-up": "brightnessctl set 5%+",
+        "on-scroll-down": "brightnessctl set 5%-",
         "min-length": 6
     },
 
@@ -73,7 +73,7 @@
     "custom/lock": {
         "format": "󰌾",
         "tooltip": false,
-        "on-click": "loginctl lock-session"
+        "on-click": "hyprlock"
     },
     "custom/reboot": {
         "format": "󰜉",
@@ -117,12 +117,11 @@
         "calendar": {
             "mode"          : "month",
             "mode-mon-col"  : 3,
-            "weeks-pos"     : "right",
+            // "weeks-pos"     : "right",
             "on-scroll"     : 1,
             "format": {
                 "months":     "<span color='#bb9af7'><b>{}</b></span>",
                 "days":       "<span color='#c0caf5'><b>{}</b></span>",
-                "weeks":      "<span color='#7dcfff'><b>W{}</b></span>",
                 "weekdays":   "<span color='#e0af68'><b>{}</b></span>",
                 "today":      "<span color='#f7768e'><b><u>{}</u></b></span>"
             }
@@ -153,7 +152,7 @@
             "critical": 15
         },
         "format": "{icon} {capacity}%",
-        "format-charging": " {capacity}%",
+        "format-charging": " {capacity}%",
         "format-plugged": " {capacity}%",
         "format-icons": ["", "", "", "", ""]
     },
@@ -162,10 +161,11 @@
         "format-wifi": "",
         "format-ethernet": "",
         "tooltip-format": " {ifname} via {gwaddr}",
+        "tooltip-format-wifi": " {essid} ({signalStrength}%)",
         "format-linked": "",
         "format-disconnected": "󰤮",
         "format-disabled": "󰤮",
-        "on-click": "adwaita-network"
+        "on-click": "foot nmtui"
     },
 
     "bluetooth": {
@@ -189,6 +189,6 @@
             "car": "",
             "default": ["", "", ""]
         },
-        "on-click": "pavucontrol"
+        "on-click": "XDG_CURRENT_DESKTOP=GNOME gnome-control-center sound"
     }
 }

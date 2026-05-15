@@ -6,17 +6,16 @@ selected=$(echo -e "$options" | wofi -dmenu --style ~/.config/wofi/style3.css -p
 
 case "$selected" in
     "Bloquear Pantalla")
-	loginctl lock-session
-	sleep 4 && hyprctl dispatch dpms off
+	hyprlock
 	;;
     "Apagar")
-        systemctl poweroff
+        ~/.config/hypr/confirm_power.sh "¿Apagar el sistema?" "systemctl poweroff"
         ;;
     "Reiniciar")
-        systemctl reboot
+        ~/.config/hypr/confirm_power.sh "¿Reiniciar el sistema?" "systemctl reboot"
         ;;
     "Cerrar Sesión")
-        hyprctl dispatch exit
+        ~/.config/hypr/confirm_power.sh "¿Cerrar sesión?" "hyprctl dispatch exit"
         ;;
     "Cancelar")
         exit 0

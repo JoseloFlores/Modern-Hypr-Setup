@@ -7,7 +7,8 @@ Este repositorio contiene la configuración optimizada para Hyprland en Debian 1
 -   **Panel Superior (Waybar):** Configuración modular con estética Tokyo Night.
     -   **Espacios de Trabajo:** Indicadores dinámicos de Hyprland.
     -   **Reloj y Calendario:** Módulo interactivo. Pasa el ratón para ver el calendario, usa la rueda para navegar entre meses y clic derecho para cambiar de modo (mes/año).
-    -   **Quick Settings:** Control de volumen (pavucontrol), red (nm-applet/adwaita), bluetooth (blueman) y batería.
+    -   **Quick Settings:** Control de volumen (gnome-control-center), red (nmtui) y bluetooth (blueman-manager).
+    -   **Confirmaciones:** Diálogos de confirmación para acciones de energía mediante `zenity`.
     -   **Media Control (MPRIS):** Muestra canción actual y permite control básico.
     -   **Power Menu Drawer:** Menú expansible en la barra para Apagar, Reiniciar, Bloquear y Salir.
     -   **Gestión de Actualizaciones:** Indicador de paquetes pendientes para APT.
