@@ -5,7 +5,7 @@
     "spacing": 0,
     "output": "eDP-1",
     "modules-left": ["hyprland/workspaces", "hyprland/window"],
-    "modules-center": ["mpris", "clock"],
+    "modules-center": ["clock"],
     "modules-right": ["group/quicksettings", "custom/updates", "backlight", "tray", "group/power"],
 
     "backlight": {
@@ -33,7 +33,7 @@
         "player-icons": {
             "default": "▶",
             "spotify": "",
-            "firefox": ""
+            "firefox": "" 
         },
         "status-icons": {
             "paused": "⏸"
@@ -93,9 +93,9 @@
 
     "hyprland/workspaces": {
         "format": "{windows}",
+        "format-empty": "{name}",
         "all-outputs": true,
-        "format-window-separator": " ",
-        "window-rewrite-default": "",
+        "format-window-separator": "",
         "window-rewrite": {
             "class<google-chrome>": "",
             "class<chrome-cmkncekebbebpfilplodngbpllndjkfo-Default>": "",

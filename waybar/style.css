@@ -1,5 +1,5 @@
 /* Importar tema activo */
-@import "themes/nord.css";
+@import "themes/catppuccin.css";
 /* Los temas disponibles son:
    - gruvbox-dark.css
    - gruvbox-light.css
@@ -19,30 +19,31 @@
 }
 
 window#waybar {
-    background-color: alpha(@base00, 0.8);
+    background-color: transparent;
     color: @base05;
     transition-property: background-color;
     transition-duration: .5s;
     border-radius: 0;
+    margin: 4px 8px;
 }
 
 #workspaces {
-    background-color: alpha(@base02, 0.6);
-    margin: 2px 4px;
+    background-color: alpha(@base02, 0.8);
+    margin: 2px 6px;
     border-radius: 12px;
 }
 
 #workspaces button {
-    padding: 0 9px;
+    padding: 0 10px;
     color: @base04;
     transition: all 0.3s ease;
 }
 
-#workspaces button.active {
-    color: @accent4;
-    background-color: alpha(@accent4, 0.1);
-    border-radius: 10px;
+#workspaces button.empty {
+    color: @base04;
+    opacity: 0.5;
 }
+
 
 #workspaces button:hover {
     color: @accent5;
@@ -59,10 +60,10 @@ window#waybar {
 #network,
 #bluetooth,
 #battery {
-    padding: 0 8px;
-    margin: 2px 2px;
-    background-color: alpha(@base02, 0.6);
-    border-radius: 10px;
+    padding: 0 10px;
+    margin: 2px 4px;
+    background-color: alpha(@base02, 0.8);
+    border-radius: 12px;
     transition: all 0.3s ease;
 }
 
